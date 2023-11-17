@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal</title>
+    <style>
+        body {
+  width: 50%;
+  font-size: 0;
+}
+div {
+  display: inline-block;
+  /*   background-image: linear-gradient(45deg, red, yellow);
+  bacground-color: "red";
+  width: '100px';
+  height: '100px'; */
+}
+div.coloredB {
+  display: inline-block;
+  background-color: "black";
+}
+div.coloredP {
+  display: inline-block;
+}
+button {
+  position: absolute;
+  top: 75%;
+  left: 19.1%;
+}
+    </style>
+</head>
+<body>
+    <div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="coloredB"></div>
+<div class="coloredB"></div>
+<div class="coloredB"></div>
+<div class="coloredB"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="coloredB"></div>
+<div class="coloredP" onclick='light()'></div>
+<div class="coloredP" onclick='light()'></div>
+<div class="coloredB"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="coloredB"></div>
+<div class="coloredP" onclick='light()'></div>
+<div class="coloredP" onclick='light()'></div>
+<div class="coloredB"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="coloredB"></div>
+<div class="coloredP" onclick='light()'></div>
+<div class="coloredP" onclick='light()'></div>
+<div class="coloredB"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="coloredB"></div>
+<div class="coloredB"></div>
+<div class="coloredB"></div>
+<div class="coloredB"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<button onclick="light()">CLICK TO LIGHT PORTAL</button>
+<script>
+    let topBoxes = document.querySelectorAll("div");
+topBoxes.forEach((item) => {
+  item.style.width = "100px";
+  item.style.height = "100px";
+  item.style.backgroundColor = "red";
+});
+
+let colored = document.querySelectorAll("div.coloredB");
+colored.forEach((item) => {
+  item.style.width = "100px";
+  item.style.height = "100px";
+  item.style.backgroundColor = "Black";
+});
+
+let colored2 = document.querySelectorAll("div.coloredP");
+colored2.forEach((item) => {
+  item.style.width = "100px";
+  item.style.height = "100px";
+  item.style.backgroundColor = "Purple";
+});
+
+var lit = true;
+function light() {
+  lit = !lit;
+  const blocks = document.getElementsByClassName("coloredP");
+  if (lit == true) {
+    for (var i = 0; i < blocks.length; i++) {
+      blocks.item(i).style.backgroundColor = "purple";
+    }
+  } else {
+    for (var i = 0; i < blocks.length; i++) {
+      blocks.item(i).style.backgroundColor = "red";
+    }
+  }
+}
+
+</script>
+</body>
+</html>
